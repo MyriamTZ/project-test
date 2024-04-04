@@ -1,1 +1,7 @@
-Welcome to restaurents view
+<h1>Les restaurants</h1>
+<% @restaurants.each do |restaurant| %>
+  <%= cl_image_tag restaurant.photo.key, weight: 200, height: 150 %>
+  <%= restaurant.name %>
+  <%= restaurant.description %>
+  <%= restaurant.category %>
+<% end %>
