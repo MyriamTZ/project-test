@@ -9,6 +9,11 @@
 #   end
 
 require "open-uri"
+
+puts "Cleaning Database..."
+Restaurant.destroy_all
+puts "Database cleaned..."
+
 puts 'Creating restaurants...'
 
 pitaya_photo = URI.open("https://images.unsplash.com/photo-1617093727343-374698b1b08d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
@@ -20,7 +25,7 @@ pitaya = Restaurant.new(
   La street food Pitaya, une cuisine spectacle comme en Thaïlande.",
   chief: "Paul"
 )
-pitaya.photo.attach(io: pitaya_photo, filename: "pitaya", content_type: "image/avif")
+pitaya.photo.attach(io: pitaya_photo, filename: "pitaya")
 pitaya.save!
 
 il_ristorante_photo = URI.open("https://images.unsplash.com/photo-1616299915952-04c803388e5f?q=80&w=1962&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
@@ -32,7 +37,7 @@ il_ristorante = Restaurant.new(
   Goûtez les trésors gustatifs de la cuisine italienne traditionnelle au sein d’une ambiance contemporaine…",
   chief: "Mario"
 )
-il_ristorante.photo.attach(io: il_ristorante_photo, filename: "il_ristorante", content_type: "image/avif")
+il_ristorante.photo.attach(io: il_ristorante_photo, filename: "il_ristorante")
 il_ristorante.save!
 
 mamounia_photo = URI.open("https://images.memphistours.com/large/50ecfbf7bf534a7c8ef7b8ab888a2265.jpg")
@@ -44,7 +49,7 @@ mamounia = Restaurant.new(
   présentes et préparées à partir de produits frais et d’ingrédients de qualité.",
   chief: "Zaïm"
 )
-mamounia.photo.atatch(io: mamounia_photo, filename: "mamounia", content_type: "image/jpeg")
+mamounia.photo.attach(io: mamounia_photo, filename: "mamounia")
 mamounia.save!
 
 puts '...finished!'
