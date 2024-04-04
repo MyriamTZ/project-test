@@ -14,7 +14,9 @@
  *= require_self
  */
 
-@import "components/cards";
-@import "components/banner";
-@import "components/button";
-@import "config/fonts";
+
+ @import "bootstrap";
+ @import "font-awesome";
+
+ @import "components/index";
+ @import "config/fonts";

@@ -1,0 +1,47 @@
+.navbar-lewagon {
+  justify-content: space-between;
+  background: white;
+  border-bottom: 1px solid #B98422;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 70px;
+}
+
+.left-navbar > ul {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-align: center;
+  align-content:center ;
+}
+
+.nav-links li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.nav-links li > a {
+  color: black;
+}
+.nav-links li:hover {
+  border-bottom: 3px solid pink;
+}
+
+.logoandtitle {
+  display: flex;
+  align-items: center;
+  // justify-content: flex-start;
+}
+
+.logoandtitle p {
+  margin: 0;
+}
